@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView2"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".TransferActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".TransactionsActivity">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:color/holo_red_light" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Transformation d'un montant"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/White"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/spinRecep"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="490dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                tools:layout_editor_absoluteX="146dp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="64dp"
+                android:text="Montant : "
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinRecep" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="13dp"
+                android:layout_height="17dp"
+                android:background="@color/White"
+                android:backgroundTint="@color/White"
+                android:text="DH"
+                android:visibility="gone"
+                tools:layout_editor_absoluteX="158dp"
+                tools:layout_editor_absoluteY="139dp"
+                tools:visibility="gone" />
+
+            <EditText
+                android:id="@+id/txt_amount"
+                android:layout_width="58dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="54dp"
+                android:ems="10"
+                android:inputType="number|numberDecimal"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                app:layout_constraintStart_toEndOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/spinRecep" />
+
+            <TextView
+                android:id="@+id/lbl_amount_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:text="Error: Amount is outside of bounds"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_amount" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginBottom="152dp"
+                android:background="@color/colorPrimaryDark"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/btn_pay"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btn_pay"
+                android:layout_width="251dp"
+                android:layout_height="42dp"
+                android:layout_marginBottom="140dp"
+                android:background="@android:color/holo_red_light"
+                android:text="Transformer"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.55"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="44dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="64dp"
+                android:text="DH"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintStart_toEndOf="@+id/txt_amount"
+                app:layout_constraintTop_toBottomOf="@+id/spinRecep"
+                tools:text="DH" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+</ScrollView>
